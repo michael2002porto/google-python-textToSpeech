@@ -6,21 +6,23 @@ from gtts import gTTS
 # play the converted audio 
 import os 
 
-# The text that you want to convert to audio 
-mytext = 'How to Make Your Crush Fall in Love with You in 30 Seconds'
+# # The text that you want to convert to audio 
+# mytext = 'How to Make Your Crush Fall in Love with You in 30 Seconds'
+# output_path = 'welcome.mp3'
 
-# Language in which you want to convert 
-language = 'id'
+def google_tts(mytext, output_path):
 
-# Passing the text and language to the engine, 
-# here we have marked slow=False. Which tells 
-# the module that the converted audio should 
-# have a high speed 
-myobj = gTTS(text=mytext, lang=language, slow=False) 
+    # Language in which you want to convert 
+    language = 'id'
 
-# Saving the converted audio in a mp3 file named 
-# welcome 
-myobj.save("welcome.mp3") 
+    # Passing the text and language to the engine, 
+    # here we have marked slow=False. Which tells 
+    # the module that the converted audio should 
+    # have a high speed 
+    myobj = gTTS(text=mytext, lang=language, slow=False) 
 
-# Playing the converted file 
-os.system("mpg321 welcome.mp3") 
+    # Saving the converted audio in a mp3 file named 
+    # welcome 
+    myobj.save(output_path)
+
+# google_tts(mytext, output_path)
