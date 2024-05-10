@@ -36,10 +36,11 @@ def python_tts(text, output_path):
     """LANGUAGE (INDONESIAN)"""
     engine.setProperty('voice', voices[1].id)
 
-    engine.say("Hello World!")
-    # engine.say('My current speaking rate is ' + str(rate))
-    engine.runAndWait()
-    engine.stop()
+    # # Speak
+    # engine.say("Hello World!")
+    # # engine.say('My current speaking rate is ' + str(rate))
+    # engine.runAndWait()
+    # engine.stop()
 
     """Saving Voice to a file"""
     # On linux make sure that 'espeak' and 'ffmpeg' are installed
